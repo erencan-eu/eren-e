@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Çağrı Lift Asansör Giriş</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="login-container">
+        <img src="assets/logo.png" alt="Logo" class="logo">
+        <h2>Panele Giriş</h2>
+        <input type="password" id="password" placeholder="Şifreyi girin">
+        <button onclick="checkPassword()">Giriş Yap</button>
+        <p id="error-message"></p>
+    </div>
+    <audio autoplay loop>
+        <source src="assets/sarki.mp3" type="audio/mpeg">
+    </audio>
+    <script>
+        function checkPassword() {
+            const password = document.getElementById('password').value;
+            if (password === "eren2525") {
+                window.location.href = "panel.html";
+            } else {
+                document.getElementById('error-message').innerText = "Hatalı şifre!";
+            }
+        }
+    </script>
+</body>
+</html>
